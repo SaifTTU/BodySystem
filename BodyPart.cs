@@ -8,6 +8,11 @@ public class BodyPart : MonoBehaviour
     public string description;
     public string secondaryDescription;
 
+    //Hey all. I got the collision thing working, but
+    //in order to do that I also had to add a Rigidbody to all the body parts
+    //then I had to open up their Contraints tab (the little arrow in the inspector)
+    //and set Freeze Position for their x,y, and z parts. 
+    //This can be done for all objects at once!
     public List<GameObject> joint = new List<GameObject>();
 
     bool jointsCreated = false;
