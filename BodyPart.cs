@@ -24,7 +24,7 @@ public class BodyPart : MonoBehaviour
         
     }
 
-    void OnCollision(Collision collision){
+    void OnCollisionStay(Collision collision){
         if(collision.gameObject.tag=="BodyPart"){
             if(jointsCreated==false)    
                 CreateJoint(collision.gameObject, gameObject);
@@ -33,14 +33,8 @@ public class BodyPart : MonoBehaviour
     }
 
     void CreateJoint(GameObject toBeAttached, GameObject self){
-        //if(myList.Contains(x))
-        //if(joint.Contains(toBeAttached)==false){
-            joint.Add(toBeAttached);
-        //}
-        //else
-        //{
-            jointsCreated = true;
-        //}
-        
+        if(joint.Contains(toBeAttached)==false){
+                joint.Add(toBeAttached);
+        }
     }
 }
